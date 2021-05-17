@@ -27,7 +27,14 @@ body {
   line-height: 26px;
   color: #1E0E62;
   -webkit-font-smoothing: antialiased;
+  background-color: white;
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 body.dev {
   background: #ccc;
   min-height: 10000px;

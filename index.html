@@ -10,7 +10,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<!-- Bootstrap 4.5.2 CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/estilos.css">
         <!-- FontAwesome CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 		<!-- Startup CSS (Styles for all blocks) -->
@@ -41,6 +41,8 @@
                 </li>       
               </ul>
             </div>
+            <i class="fas fa-adjust"></i>
+            <button onclick="myFunction()">Dark mode</button>
         </nav>
         <header>
             <!-- Carrusel -->
@@ -87,7 +89,7 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
     <!-- Container 1 -->
-    <section class="pt-65 pb-65 application_2 bg-light color-filter-dark-1">
+    <section class="pt-65 pb-65 application_2 color-filter-dark-1">
         <div class="container px-xl-0">
             <div class="row justify-content-center justify-content-md-between align-items-center">
                 <div class="mb-15 mb-md-0 col-12 col-md-5 col-xl-6 d-flex justify-content-center">
@@ -102,38 +104,38 @@
                     </div>
                     <div class="mt-95 row">
                         <div class="col-6 col-lg-4 pb-25 with_borders aos-animate">
-                            <img src="img/server-solid.svg" width="50px" height="50px" class="pl-15">
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">
+                            <i class="fas fa-server pl-70"></i>
+                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
                                 Conexión redundante
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 pb-25 with_borders aos-animate">
-                            <img src="img/clock-solid.svg" width="50px" height="50px" class="pl-15">
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">
+                            <i class="fas fa-clock pl-70"></i>
+                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
                                 Uptime 99.9%
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 pb-25 with_borders aos-animate">
-                            <img src="img/envelope-solid.svg" width="50px" height="50px" class="pl-15">
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">
+                            <i class="fas fa-envelope pl-70"></i>
+                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
                                 Filtro Antispam
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 pb-25 pt-35 with_borders aos-animate">
-                            <img src="img/download-solid.svg" width="50px" height="50px" class="pl-15">
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">
+                            <i class="fas fa-download pl-70"></i>
+                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
                                 Respaldos automáticos
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 pb-25 pt-35 with_borders aos-animate">
-                            <img src="img/tachometer-alt-solid.svg" width="50px" height="50px" class="pl-15">
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">
+                            <i class="fas fa-tachometer-alt pl-70"></i>
+                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
                                 Almacenamiento SSD
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 pb-25 pt-35 with_borders aos-animate">
-                            <img src="img/network-wired-solid.svg" width="50px" height="50px" class="pl-15">
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase">
+                            <i class="fas fa-ethernet pl-70"></i>
+                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
                                 IPv6
                             </div>
                         </div>
@@ -143,7 +145,7 @@
         </div>
     </section>
     <!-- Container 2 -->
-		<section class="pt-105 pb-45 bg-light text-center feature_1">
+		<section class="pt-105 pb-45 text-center feature_1">
 			<div class="container px-xl-0">
 				<div class="row justify-content-center">
 					<div class="col-xl-10">
@@ -380,5 +382,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+    </script>
     </body>
 </html>
