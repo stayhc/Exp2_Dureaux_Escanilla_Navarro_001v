@@ -47,7 +47,15 @@ body {
     font-size: 25px;
   }
   
-  .dark-mode {
+.dark-mode {
     background-color: black;
     color: white;
-  }
+}
+
+#particles-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
