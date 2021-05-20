@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>DMN Hosting</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <!-- Bootstrap 4.5.2 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- Startup CSS (Styles for all blocks) -->
     <link href="css/style.min.css" rel="stylesheet" />
 </head>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -56,6 +48,7 @@
         <button onclick="myFunction()">Dark mode</button>
     </nav>
 
+    <!-- Formulario -->
     <section class="pt-65 pb-65 application_2 color-filter-dark-1">
         <div class="container px-xl-0">
             <div class="container" style="margin: 40px 30px 70px;">
@@ -71,41 +64,41 @@
                             <label for="lnombre">Nombre:</label>
                             <input type="text" class="form-control" id="nom" placeholder="Ingrese nombre" name="nom" minlength="1" maxlength="30" required autofocus >
                             <div class="valid-feedback">Valido.</div>
-                            <div class="invalid-feedback">Porfavor ingrese informacion.</div>
+                            <div class="invalid-feedback">Por favor ingrese información.</div>
                         </div>
                         <div class="col">
                             <label for="lapellido">Apellido:</label>
                             <input type="text" class="form-control" id="ape" placeholder="Ingrese apellido" name="ape" minlength="1" maxlength="30"required>
                             <div class="valid-feedback">Valido.</div>
-                            <div class="invalid-feedback">Porfavor ingrese informacion.</div>
+                            <div class="invalid-feedback">Por favor ingrese información.</div>
                         </div>
                       </div>
 
                     <label for="lcontraseña1">Contraseña:</label>
                     <input type="password" class="form-control" id="contra1" placeholder="Ingrese contraseña" name="clave1" minlength="5" required>
                     <div class="valid-feedback">Valido.</div>
-                    <div class="invalid-feedback">Contraseña debe tener 5 caracteres como minimo.</div>
+                    <div class="invalid-feedback">Contraseña debe tener 5 caracteres como mínimo.</div>
 
-                    <label for="lcontraseña2">Repita ontraseña:</label>
+                    <label for="lcontraseña2">Repita contraseña:</label>
                     <input type="password" class="form-control" id="contra2" placeholder="Ingrese contraseña" name="clave2" minlength="5" required>
                     <div class="invalid-feedback">Contraseña debe ser la misma.</div>
                     
-                    <label for="lcorreo">Correo electronico:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingrese correo electronico" name="email" required >
+                    <label for="lcorreo">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese correo electrónico" name="email" required >
                     <div class="valid-feedback">Valido.</div>
-                    <div class="invalid-feedback">Porfavor ingrese correo electronico</div>
+                    <div class="invalid-feedback">Por favor ingrese correo electrónico</div>
 
                     <div class="row">
                         <div class="col">
-                            <label for="lnumerotarjeta">Tarjeta de credito:</label>
+                            <label for="lnumerotarjeta">Tarjeta de crédito:</label>
                             <input type="text" class="form-control" id="num_tar" placeholder="" name="num_tar" minlength="16" maxlength="16"  size=3 required>
                         </div>
                         <div class="col">
-                            <label for="lcodigoseguridad">Codigo de seguridad:</label>
+                            <label for="lcodigoseguridad">Código de seguridad:</label>
                             <input type="text" class="form-control" id="cod_seg" placeholder="" name="cod_seg" minlength="3" maxlength="3"  size=3 required>
                         </div>
                         <div class="col" >
-                            <label>Fecha de expiracion:</label><br>
+                            <label>Fecha de expiración:</label><br>
                                 <select class="form-control" >
                                     <option value="01">Enero</option>
                                     <option value="02">Febrero</option>
@@ -134,15 +127,15 @@
                         </div>
                     </div>
 
-                    <label for="ldireccion">Direccion de facturacion:</label>
-                        <input type="text" class="form-control" id="dir_fac" placeholder="Ingrese direccion" name="dir_fac" required>
+                    <label for="ldireccion">Dirección de facturación:</label>
+                        <input type="text" class="form-control" id="dir_fac" placeholder="Ingrese dirección" name="dir_fac" required>
                         <div class="valid-feedback">Valido.</div>
-                        <div class="invalid-feedback">Porfavor ingrese informacion.</div>
+                        <div class="invalid-feedback">Por favor ingrese información.</div>
             </div>
         </div>
                     <div class="form-group form-check">
                         <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember" required> Acepto los terminos de uso.
+                        <input class="form-check-input" type="checkbox" name="remember" required> Acepto los términos de uso.
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Aceptar para continuar.</div>
                         </label>
@@ -150,15 +143,14 @@
                     <button type="submit" class="btn mt-10 mb-10 action-2">Aceptar</button>
                 </form>
               </div>
-              
+
+              <!-- Validación de formulario -->
               <script>
-              // Disable form submissions if there are invalid fields
+              // Desactivar el envió del formulario si tiene campos inválidos
               (function() {
                 'use strict';
                 window.addEventListener('load', function() {
-                  // Get the forms we want to add validation styles to
                   var forms = document.getElementsByClassName('needs-validation');
-                  // Loop over them and prevent submission
                   var validation = Array.prototype.filter.call(forms, function(form) {
                     form.addEventListener('submit', function(event) {
                       if (form.checkValidity() === false) {
@@ -173,7 +165,8 @@
               </script>
         </div>
     </section>
-    
+
+    <!-- Footer -->
     <footer class="pt-75 pb-65 text-center footer_1 bg-dark">
         <div class="container px-xl-0">
             <div class="row justify-content-between align-items-center lh-40 links">
