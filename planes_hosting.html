@@ -11,8 +11,33 @@
         <link rel="stylesheet" href="css/estilos.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 		<link href="css/style.min.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <script>
+            $.getJSON('https://mindicador.cl/api', function(data) {
+                var dailyIndicators = data;
+                $("<p/>", {
+                    html: 'El valor actual del Bitcoin es de: $' + dailyIndicators.bitcoin.valor
+                }).appendTo("body");
+            }).fail(function() {
+                console.log('Error al consumir la API!');
+            });
+        </script>
+        
     </head>
     <body>
+
+    <hr><hr><hr>
+    <section class="pt-105 pb-45 text-center color-filter-dark-1">
+        <div class="container-fluid text-center">
+            <h3>Paga con Bitcoin <img src="img/Bitcoin.svg.png" alt="" width="50" height="50"> </h3>
+            <br>
+            <p>Bitcoin es una red consensuada que permite un nuevo sistema de pago y una moneda completamente digital. <br> Es la primera red entre pares de pago descentralizado impulsado 
+                por sus usuarios sin una autoridad central o intermediarios. <br> Desde un punto de vista de usuario, Bitcoin es como dinero para Internet.</p>
+            <p>Si deseas realizar un pago con Bitcoin, tienes que hacerlo a la siguiente dirección: <br><br><b>1NcXApXcqZGeQUguAw3v5vSbrQoj3yaK8M</b></p>
+        </div>
+    </section>
+
         <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
               <span class="navbar-toggler-icon"></span>
@@ -40,165 +65,21 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>  
+                </li> 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li class="nav-item">
                     <a class="nav-link" href="registro.html"><b>Registrarse</b></a>
-                </li>    
+                </li>
               </ul>
             </div>
             <i class="fas fa-adjust"></i>
             <button onclick="myFunction()">Dark mode</button>
         </nav>
-        <header>
-            <!-- Carrusel -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner" role="listbox">
-                <!-- Slide uno -->
-                <div class="carousel-item active" style="background-image: url('img/carrusel1.jpg')">
-                  <div class="carousel-caption">
-                    <h3 class="display-4">Hosting compartido</h3>
-                    <p class="lead">Excelente rendimiento a un bajo precio.</p>
-                  </div>
-                </div>
-                <!-- Slide dos -->
-                <div class="carousel-item" style="background-image: url('img/carrusel2.jpg')">
-                  <div class="carousel-caption">
-                    <h3 class="display-4">Servidores dedicados</h3>
-                    <p class="lead">Máximo rendimiento en servidores empresariales.</p>
-                  </div>
-                </div>
-                <!-- Slide tres -->
-                <div class="carousel-item" style="background-image: url('img/carrusel3.jpg')">
-                  <div class="carousel-caption">
-                    <h3 class="display-4">Servicios de Housing</h3>
-                    <p class="lead">Nuestro Datacenter cuenta con seguridad de última generación.</p>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-            </div>
-          </header>
+        
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-    <!-- Container 1 -->
-    <section class="pt-65 pb-65 application_2 color-filter-dark-1">
-        <div id="particles-js"></div>
-        <div class="container px-xl-0">
-            <div class="row justify-content-center justify-content-md-between align-items-center">
-                <div class="mb-15 mb-md-0 col-12 col-md-5 col-xl-6 d-flex justify-content-center">
-                    <img src="img/server1.png" alt="" class="img-fluid application_2_left_img aos-animate">
-                </div>
-                <div class="col-md-7 col-xl-6">
-                    <h2 class="col-lg-11 color-main aos-animate">
-                        Servidores de última generación
-                    </h2>
-                    <div class="mt-25 col-lg-9 color-heading f-18 text-adaptive aos-animate">
-                        Confiabilidad y estabilidad garantizada, nos especializamos en servicios críticos para su empresa.
-                    </div>
-                    <div class="mt-95 row">
-                        <div class="col-6 col-lg-4 pb-25 with_borders aos-animate">
-                            <i class="fas fa-server pl-70"></i>
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
-                                Conexión redundante
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 pb-25 with_borders aos-animate">
-                            <i class="fas fa-clock pl-70"></i>
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
-                                Uptime 99.9%
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 pb-25 with_borders aos-animate">
-                            <i class="fas fa-envelope pl-70"></i>
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
-                                Filtro Antispam
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 pb-25 pt-35 with_borders aos-animate">
-                            <i class="fas fa-download pl-70"></i>
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
-                                Respaldos automáticos
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 pb-25 pt-35 with_borders aos-animate">
-                            <i class="fas fa-tachometer-alt pl-70"></i>
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
-                                Almacenamiento SSD
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 pb-25 pt-35 with_borders aos-animate">
-                            <i class="fas fa-ethernet pl-70"></i>
-                            <div class="mt-15 col-xl-11 color-main f-14 bold sp-20 text-uppercase text-center">
-                                IPv6
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Container 2 -->
-		<section class="pt-105 pb-45 text-center feature_1">
-			<div class="container px-xl-0">
-				<div class="row justify-content-center">
-					<div class="col-xl-10">
-						<h2 class="mb-45 small aos-animate">
-							¿Por qué elegirnos?
-						</h2>
-						<div class="row justify-content-center">
-							<div class="col-md-4 mb-50 aos-animate">
-								<i class="fas fa-briefcase f-60 action-2">
-								</i>
-								<div class="mt-20 mb-25 f-22 title">
-									Profesionales 
-									<br>capacitados
-								</div>
-								<div class="color-heading text-adaptive">
-									Nuestro personal esta altamente especializado en el area de servidores 
-									<br>lo cual le garantiza un excelente servicio.
-								</div>
-							</div>
-							<div class="col-md-4 mb-50 aos-animate">
-								<i class="fas fa-compress-arrows-alt f-60 action-2">
-								</i>
-								<div class="mt-20 mb-25 f-22 title">
-									Constante mejora 
-									<br>de la infraestructura
-								</div>
-								<div class="color-heading text-adaptive">
-									Renovamos nuestro hardware de acuerdo a las exigencias del mercado para estar siempre a la vanguardia.
-								</div>
-							</div>
-							<div class="col-md-4 mb-50 aos-animate">
-								<i class="fas fa-desktop f-60 action-2">
-								</i>
-								<div class="mt-20 mb-25 f-22 title">
-									Excelente 
-									<br>soporte técnico
-								</div>
-								<div class="color-heading text-adaptive">
-									Tenemos un tiempo de respuesta a las incidencias de menos de una hora.
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    
     <!-- Lista de precios -->
     <section class="pt-105 pb-100 text-center pricing_table_1">
         <div class="container px-xl-0">

@@ -7,17 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <!-- Bootstrap 4.5.2 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- Startup CSS (Styles for all blocks) -->
     <link href="css/style.min.css" rel="stylesheet" />
 </head>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -45,13 +38,17 @@
                     <a class="nav-link" href="quienes_somos.html">Quiénes somos</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="planes_hosting.html">Hosting</a>
+                </li>  
+                <li class="nav-item">
                     <a class="nav-link" href="galeria.html">Galería</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li class="nav-item">
-                    <a class="nav-link" href="registro.html">Registrarse</a>
+                    <a class="nav-link" href="registro.html"><b>Registrarse</b></a>
                 </li>
             </ul>
         </div>
@@ -61,28 +58,28 @@
 
     <!-- Container 1 -->
     <section class="pt-65 pb-65 application_2 color-filter-dark-1">
-        <div class="container px-xl-0">
-            <div class="row justify-content-center justify-content-md-between align-items-center">
+        <div class="container px-xl-0 text-left">
+            <div class="container-fluid">
                 <div class="mt-4">        
-                    <h2 class="col-lg-12 color-main aos-animate text-left">
+                    <h2 class="col-lg-12 color-main aos-animate text-center">
                         ¿Necesitas Ayuda?
                     </h2>
                 </div>
                 <div class="mt-4 row"> 
-                    <div class="col-12 tamaño-un-poquito-mas-grande">
+                    <div class="col-12 tamaño-un-poquito-mas-grande text-center">
                         Completa el siguiente formulario con tus dudas o preguntas para así poder contactarte a la brevedad.
                     </div>
                     
-                    <div class="mt-5 col-12">
+                    <div class="mt-5 col-12 justify-content-center">
                         <form class="needs-validation" novalidate id="formularioContacto" action="contacto_exitoso.html">
                             <div class="row">
-                                <div class="form-group col">
+                                <div class="col">
                                     <label for="nombre">Nombre</label>
                                     <input type="text" class="form-control" id="nombre"  placeholder="Ingrese su nombre" required>
                                     <div class="valid-feedback">Valido.</div>
                                     <div class="invalid-feedback">Por favor ingrese información.</div>
                                 </div>
-                                <div class="form-group col">
+                                <div class="col">
                                     <label for="apellido">Apellido</label>
                                     <input type="text" class="form-control" id="apellido"  placeholder="Ingrese su apellido" required> 
                                     <div class="valid-feedback">Valido.</div>
@@ -91,26 +88,26 @@
                             </div>
                             
                             <div class="row">
-                                <div class="form-group col">
+                                <div class="col">
                                     <label for="correo">Correo electrónico</label>
                                     <input type="email" class="form-control" id="correo"  placeholder="Ingrese su correo electrónico" required>
                                     <small id="infoCorreo" class="form-text text-muted">No compartiremos su correo personal con nadie.</small>
                                 </div>
-                                <div class="form-group col">
+                                <div class="col">
                                     <label for="confirmacionCorreo">Confirmar correo</label>
                                     <input type="email" class="form-control" id="confirmacionCorreo"  placeholder="Confirme su correo" required>    
                                 </div>
                                 
                             </div>
                             <div class="row">
-                                <div class="form-group col-6">
+                                <div class="col">
                                     <label for="telefono">Teléfono</label>
                                     <input type="tel" class="form-control" id="telefono"  placeholder="Ingrese su número de teléfono" required>   
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="form-group col-6">
+                                <div class="col">
                                     <label for="tipoConsulta">Área de consulta</label>
                                     <select class="form-control" id="tipoConsulta">
                                         <option>Ventas</option>
@@ -126,7 +123,7 @@
                                 <textarea class="form-control" id="mensaje" rows="7"></textarea>
                             </div>
 
-                            <div class="form-check">
+                            <div class="form-group form-check text-center">
                                 <input type="checkbox" class="form-check-input" id="recibirInformacion">
                                 <label class="form-check-label" for="recibirInformacion">Deseo recibir información y promociones en mi correo</label>
                             </div>
@@ -166,12 +163,24 @@
     <footer class="pt-75 pb-65 text-center footer_1 bg-dark">
         <div class="container px-xl-0">
             <div class="row justify-content-between align-items-center lh-40 links">
-                <div class="col-lg-4 col-sm-6 text-sm-right text-lg-left order-1 order-lg-0 aos-animate">
+                <div class="col-lg-0 col-sm-0 text-sm-right text-lg-left order-1 order-lg-0 aos-animate">
+                    <a href="index.html" class="link mx-15 color-white">
+                        Inicio
+                    </a>
                     <a href="quienes_somos.html" class="link mr-15 color-white">
                         Quiénes somos
                     </a>
+                    <a href="planes_hosting.html" class="link mx-15 color-white">
+                        Hosting
+                    </a>
                     <a href="galeria.html" class="link mx-15 color-white">
                         Galería
+                    </a>
+                    <a href="contacto.html" class="link mx-15 color-white">
+                        Contacto
+                    </a>
+                    <a href="registro.html" class="link mx-15 color-white">
+                        Registro
                     </a>
                 </div>
                 <div class="mb-10 mb-lg-0 col-lg-auto order-0">
@@ -187,6 +196,7 @@
                     </a>
                 </div>
             </div>
+            <br><br>
             <div class="row justify-content-center">
                 <div class="mt-10 col-xl-4 col-lg-5 col-md-6 col-sm-8 aos-animate">
                     <div class="text-adaptive color-transparent-white">
