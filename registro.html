@@ -65,40 +65,42 @@
                     <div class="row">
                         <div class="col">
                             <label for="lnombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Ingrese nombre" name="nom" minlength="1" maxlength="30" required autofocus >
+                            <input type="text" class="form-control" id="nom" placeholder="Ingrese nombre" name="nom" minlength="1" maxlength="30" onchange="CambiarMayusculas()" required autofocus >
                             <div class="valid-feedback">Valido.</div>
-                            <div class="invalid-feedback">Por favor ingrese información.</div>
+                            <div class="invalid-feedback">Por favor ingrese información</div>
                         </div>
                         <div class="col">
                             <label for="lapellido">Apellido:</label>
-                            <input type="text" class="form-control" id="ape" placeholder="Ingrese apellido" name="ape" minlength="1" maxlength="30"required>
+                            <input type="text" class="form-control" id="ape" placeholder="Ingrese apellido" name="ape" minlength="1" maxlength="30" onchange="CambiarMayusculas()" required>
                             <div class="valid-feedback">Valido.</div>
-                            <div class="invalid-feedback">Por favor ingrese información.</div>
+                            <div class="invalid-feedback">Por favor ingrese información</div>
                         </div>
                       </div>
 
                     <label for="lcontraseña1">Contraseña:</label>
                     <input type="password" class="form-control" id="contra1" placeholder="Ingrese contraseña" name="clave1" minlength="5" required>
                     <div class="valid-feedback">Valido.</div>
-                    <div class="invalid-feedback">Contraseña debe tener 5 caracteres como mínimo.</div>
+                    <div class="invalid-feedback">Contraseña debe tener 5 caracteres como mínimo</div>
 
                     <label for="lcontraseña2">Repita contraseña:</label>
                     <input type="password" class="form-control" id="contra2" placeholder="Ingrese contraseña" name="clave2" minlength="5" required>
-                    <div class="invalid-feedback">Contraseña debe ser la misma.</div>
+                    <div class="invalid-feedback">Contraseña debe ser la misma</div>
                     
                     <label for="lcorreo">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingrese correo electrónico" name="email" required >
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese correo electrónico" name="email" onchange="CambiarMayusculas()" required >
                     <div class="valid-feedback">Valido.</div>
                     <div class="invalid-feedback">Por favor ingrese correo electrónico</div>
 
                     <div class="row">
                         <div class="col">
                             <label for="lnumerotarjeta">Tarjeta de crédito:</label>
-                            <input type="text" class="form-control" id="num_tar" placeholder="" name="num_tar" minlength="16" maxlength="16"  size=3 required>
+                            <input type="tel" inputmode="numeric" pattern="[0-9\s]{16}" class="form-control" id="num_tar" placeholder="" name="num_tar" maxlength="16" required>
+                            <div class="invalid-feedback">Por favor ingrese solo números</div>
                         </div>
                         <div class="col">
                             <label for="lcodigoseguridad">Código de seguridad:</label>
-                            <input type="text" class="form-control" id="cod_seg" placeholder="" name="cod_seg" minlength="3" maxlength="3"  size=3 required>
+                            <input type="tel" inputmode="numeric" pattern="[0-9\s]{3}" class="form-control" id="cod_seg" placeholder="" name="cod_seg" minlength="3" maxlength="3"  size=3 required>
+                            <div class="invalid-feedback">Por favor ingrese solo números</div>
                         </div>
                         <div class="col" >
                             <label>Fecha de expiración:</label><br>
@@ -132,18 +134,19 @@
                     </div>
 
                     <label for="ldireccion">Dirección de facturación:</label>
-                        <input type="text" class="form-control" id="dir_fac" placeholder="Ingrese dirección" name="dir_fac" required>
+                        <input type="text" class="form-control" id="dir_fac" placeholder="Ingrese dirección" name="dir_fac" onchange="CambiarMayusculas()" required>
                         <div class="valid-feedback">Valido.</div>
-                        <div class="invalid-feedback">Por favor ingrese información.</div>
+                        <div class="invalid-feedback">Por favor ingrese información</div>
             </div>
         </div>
                     <div class="form-group form-check text-center">
-                        <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember" required> Acepto los términos de uso.
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Aceptar para continuar.</div>
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Acepto los términos de uso.
                         </label>
+                        <div class="invalid-feedback">Aceptar para continuar</div>
                     </div>
+
                     <button type="submit" class="btn mt-10 mb-10 action-2">Aceptar</button>
                 </form>
               </div>
@@ -167,6 +170,21 @@
                 }, false);
               })();
               </script>
+
+              <script>
+                  function CambiarMayusculas()
+                {
+                    var a = document.getElementById("nom");
+                    var b = document.getElementById("ape");
+                    var c = document.getElementById("email");
+                    var d = document.getElementById("dir_fac");
+                    a.value = a.value.toUpperCase();
+                    b.value = b.value.toUpperCase();
+                    c.value = c.value.toUpperCase();
+                    d.value = d.value.toUpperCase();
+                }
+              </script>
+
         </div>
     </section>
 
